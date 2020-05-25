@@ -46,7 +46,7 @@ settings:
   fonts.default_size:
     global: 12pt
   url.default_page:
-    global: https://start.duckduckgo.com
+    global: about:blank
   url.incdec_segments:
     global:
     - path
@@ -67,3 +67,5 @@ settings:
       yt: https://www.youtube.com/results?search_query={}
       zh: https://www.zhihu.com/search?q={}
       zw: https://zh.wikipedia.org/wiki/{}
+  url.start_pages:
+    global: https://github.com
