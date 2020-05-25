@@ -1,0 +1,95 @@
+#
+#~/.config/i3/config
+#
+ 
+#KEYBINDINGS
+ 
+set $mod Mod4
+ 
+bindcode $mod+20 reload
+bindcode $mod+21 restart
+bindcode $mod+22 kill
+ 
+bindcode $mod+48 split h
+bindcode $mod+47 split v
+bindcode $mod+36 layout toggle split
+ 
+bindcode $mod+57 resize shrink width 10 px or 10 ppt
+bindcode $mod+58 resize grow height 10 px or 10 ppt
+bindcode $mod+59 resize shrink height 10 px or 10 ppt
+bindcode $mod+60 resize grow width 10 px or 10 ppt
+bindcode $mod+61 fullscreen toggle
+ 
+bindcode $mod+29 exec --no-startup-id alacritty 
+bindcode $mod+30 exec --no-startup-id rofi -show run
+bindcode $mod+31 exec --no-startup-id qutebrowser
+bindcode $mod+32 exec --no-startup-id emacs
+ 
+bindcode $mod+43 focus left
+bindcode $mod+44 focus down
+bindcode $mod+45 focus up
+bindcode $mod+46 focus right
+ 
+bindcode $mod+38 move left
+bindcode $mod+39 move down
+bindcode $mod+40 move up
+bindcode $mod+41 move right
+ 
+bindcode $mod+10 workspace 1
+bindcode $mod+11 workspace 2
+bindcode $mod+12 workspace 3
+bindcode $mod+13 workspace 4
+bindcode $mod+14 workspace 5
+bindcode $mod+15 workspace 6
+bindcode $mod+16 workspace 7
+bindcode $mod+17 workspace 8
+bindcode $mod+18 workspace 9
+bindcode $mod+19 workspace 10
+ 
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+ 
+bindcode $mod+24 move window to workspace prev
+bindcode $mod+25 move window to workspace next
+bindcode $mod+26 move container to workspace prev
+bindcode $mod+27 move container to workspace next
+ 
+
+
+#LAYOUT
+
+gaps inner 10
+gaps outer 0
+default_border pixel 0
+ 
+popup_during_fullscreen smart
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 500 ms
+ 
+#STYLE
+ 
+font pango: M+ 1mn
+
+# COLOR
+
+# class                 border  backgr  text    indicator child_border
+client.focused          #a9b665 #a9b665 #32302f #a9b665   #a9b665
+client.unfocused        #32302f #32302f #dfbf8e #32302f   #32302f
+client.focused_inactive #32302f #32302f #dfbf8e #32302f   #32302f
+
+#AUTOSTART
+
+exec --no-startup-id picom -CGb --config ~/.config/picom/picom.conf
+exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/alone-girl-wallpaper.jpg
+exec --no-startup-id fcitx -d
+exec --no-startup-id emacs --daemon 
+exec --no-startup-id udiskie --no-notify --tray --file-manager pcmanfm

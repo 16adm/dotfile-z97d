@@ -1,0 +1,80 @@
+[bar/fullbar]
+monitor = 
+include-file = ~/.config/polybar/fullbar
+
+; Gruvbox material theme
+background = #bb32302f
+foreground = #dfbf83
+pseudo-transparency = true
+modules-left = i3 mpd title 
+modules-center =
+modules-right = volume eth date
+
+tray-position = right
+tray-padding = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/date]
+type = internal/date
+interval = 60
+date = %a %d %b
+time = %l:%M %p
+label =  %date% %time%
+format-padding = 1
+
+[module/volume]
+type = internal/pulseaudio
+format-volume = <ramp-volume><label-volume>
+format-muted = 婢
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+format-connected = <label-connected>
+label-connected = %downspeed:9%
+format-disconnected = <label-disconnected>
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+format-padding = 1
+
+[module/i3]
+type = internal/i3
+pin-workspace = false
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = false
+format = <label-state> <label-mode>
+label-focused = %name%
+label-focused-padding = 3
+
+; Gruvbox Material theme
+label-focused-background = "#a9b665"
+label-focused-foreground = "#32302f"
+label-unfocused = %name%
+label-unfocused-padding = 3
+label-visible = %name%
+label-visible-padding = 2
+label-mode = %mode%
+label-mode-background = "#ea6962"
+label-mode-foreground = "#32302f"
+label-mode-padding = 2
+label-urgent = %name%
+label-urgent-padding = 3
+
+[module/title]
+type = internal/xwindow
+format = <label>
+label =  %title%
+label-maxlen = 20
+
+[module/separator]
+type = custom/text
+content =  
+content-padding = 1

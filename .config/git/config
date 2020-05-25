@@ -1,0 +1,10 @@
+[user]
+	name = 16adm
+	email = phillippe.shieh@gmail.com
+[core]
+	editor = nvim
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
