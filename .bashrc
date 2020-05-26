@@ -148,7 +148,7 @@ alias doomck='doom doctor'
 alias top=htop
 
 # GIT_OR_HUB
-alias git=hub
+#alias git=hub
 
 # AUTOCOLOR
 alias ls='ls --color=auto'

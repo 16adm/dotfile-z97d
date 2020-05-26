@@ -16,6 +16,10 @@ set softtabstop=4         	" Tab key indents by 4 spaces.
 set shiftwidth=4         	" >> indents by 4 spaces.
 set shiftround             	" >> indents to next multiple of 'shiftwidth'.
 set backspace=indent,eol,start  " Make backspace work as you would expect.
+" Timeout
+set notimeout
+" Showcmd
+set showcmd
 " More...
 set list
 if has('multi_byte') && &encoding ==# 'utf-8'
@@ -30,16 +34,24 @@ endif
 call plug#begin('~/.vim/plugged')
 " Gruvbox-material Color Scheme 
 Plug 'sainnhe/gruvbox-material'
+" Startup Interface
+Plug 'mhinz/vim-startify'
 " Lightline
 Plug 'itchyny/lightline.vim'
 " Easy-align
 Plug 'junegunn/vim-easy-align'
+"Easy Pairs
+Plug 'jiangmiao/auto-pairs'
+" Easy Surround
+Plug 'tpope/vim-surround'
 " Deoplete
 Plug 'Shougo/deoplete.nvim', {'do':':UpdateRemotePlugins'}
 " Comment
 Plug 'preservim/nerdcommenter'
 " Vim Org-mode
 Plug 'vimwiki/vimwiki'
+"Vim Calendar
+Plug 'itchyny/calendar.vim'
 " Writing!
 Plug 'junegunn/goyo.vim'
 " Hyperfocus
@@ -65,6 +77,8 @@ let g:deoplete#enable_at_startup=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Leader Key
 let mapleader=" "
+let maplocalleader=','
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
