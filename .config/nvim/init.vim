@@ -4,7 +4,7 @@ set nocompatible
 syntax enable
 filetype plugin on
 " Textwidth 
-set textwidth=80		" Set Maximum textwidth
+set textwidth=100		" Set Maximum textwidth
 set colorcolumn=+1		" Highlight textwidth
 " No.
 set relativenumber		" Show relative number
