@@ -39,24 +39,28 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'mhinz/vim-startify'
 " Lightline
 Plug 'itchyny/lightline.vim'
-" Easy-align
-Plug 'junegunn/vim-easy-align'
-"Easy Pairs
-Plug 'jiangmiao/auto-pairs'
-" Easy Surround
-Plug 'tpope/vim-surround'
-" Deoplete
-Plug 'Shougo/deoplete.nvim', {'do':':UpdateRemotePlugins'}
-" Comment
-Plug 'preservim/nerdcommenter'
-" Vim Org-mode
-Plug 'vimwiki/vimwiki'
+" Show Key Mapping
+Plug 'liuchengxu/vim-which-key'
 "Vim Calendar
 Plug 'itchyny/calendar.vim'
 " Writing!
 Plug 'junegunn/goyo.vim'
 " Hyperfocus
 Plug 'junegunn/limelight.vim'
+" Easy-align
+Plug 'junegunn/vim-easy-align'
+"Easy Pairs
+Plug 'jiangmiao/auto-pairs'
+" Easy Surround
+Plug 'tpope/vim-surround'
+" Comment
+Plug 'preservim/nerdcommenter'
+"Fuzzy Search
+Plug 'junegunn/fzf.vim'
+" Deoplete
+Plug 'Shougo/deoplete.nvim', {'do':':UpdateRemotePlugins'}
+" Git
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

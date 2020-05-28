@@ -64,6 +64,7 @@ settings:
       git: https://github.com/search?q={}
       rd: https://reddit.com/search/?q={}
       rdr: https://reddit.com/r/{}
+      sos: https://stackoverflow.com/search?q={}
       yt: https://www.youtube.com/results?search_query={}
       zh: https://www.zhihu.com/search?q={}
       zw: https://zh.wikipedia.org/wiki/{}
