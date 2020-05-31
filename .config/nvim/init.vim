@@ -2,7 +2,9 @@
 
 set nocompatible
 syntax enable
+" Filetype
 filetype plugin on
+filetype indent on
 " Textwidth 
 set textwidth=100		" Set Maximum textwidth
 set colorcolumn=+1		" Highlight textwidth
@@ -27,7 +29,6 @@ if has('multi_byte') && &encoding ==# 'utf-8'
 else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Managing plugins with junegunn/vim-plug
@@ -39,8 +40,6 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'mhinz/vim-startify'
 " Lightline
 Plug 'itchyny/lightline.vim'
-" Show Key Mapping
-Plug 'liuchengxu/vim-which-key'
 "Vim Calendar
 Plug 'itchyny/calendar.vim'
 " Writing!
@@ -77,6 +76,9 @@ colorscheme gruvbox-material
 " Lightline gruvbox-material theme
 let g:lightline={'colorscheme':'gruvbox_material'}
 
+" Auto Pairs
+let g:AutoPairs={'<':'>', '(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`"}
+
 " Deoplete
 let g:deoplete#enable_at_startup=1
 
@@ -84,10 +86,81 @@ let g:deoplete#enable_at_startup=1
 
 " Leader Key
 let mapleader=" "
-let maplocalleader=','
+
+" Screen
+noremap <leader>sf <C-F>
+noremap <leader>sb <C-B>
+noremap <leader>su <C-U>
+noremap <leader>sd <C-D>
+
+" Window
+map <leader>w <C-W>
+noremap <leader>wS :Startify<CR>
 
 inoremap jk <Esc>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Local Leader Key
+let maplocalleader=','
+
+" Writing: Goyo, Limelight, Calendar
+noremap <localleader>wg :Goyo<CR>
+noremap <localleader>wG :Goyo!<CR>
+noremap <localleader>wl :Limelight<CR>
+noremap <localleader>wL :Limelight!<CR>
+noremap <localleader>wc :Calendar<CR>
+noremap <localleader>wC :Calendar -view=clock<CR>
+
+"Auto-pairs
+let g:AutoPairsShortcutToggle='<localleader>pt'
+let g:AutoPairsShortcutFastWrap='<localleader>pe'
+let g:AutoPairsShortcutJump='<localleader>pn'
+let g:AutoPairsShortcutBackInsert='<localleader>pb'
+
+"Surround
+"cs"'                         " change surround from "" to ''
+"cs"<q>                       " change surround from "" to tag <q></q>
+"cst'                         " change surround from <tag></tag> to ''
+"ds"                          " remove surround ""
+"ysiw]                        " add surround [] w/o space
+"ysiw[                        " add surround [] w/ space
+"ysiw<em>                     " add surround tag <em></em>
+"yss)                         " add surround () w/o space, entire line
+"<M-v>S<p class="fuck">       " add surround tag <p class="fuck"></p> in visual mode
+
+"NerdCommenter
+map <localleader>cc <plug>NERDCommenterComment
+map <localleader>ct <plug>NERDCommenterToggle
+map <localleader>ca <plug>NERDCommenterAppend
+map <localleader>ci <plug>NERDCommenterInsert
+map <localleader>ce <plug>NERDCommenterToEOL
+
+"FZF
+":Files [PATH]              "Files (runs $FZF_DEFAULT_COMMAND if defined)
+":GFiles [OPTS]             "Git files (git ls-files)
+":GFiles?                   "Git files (git status)
+":Buffers                   "Open buffers
+":Colors                    "Color schemes
+":Ag [PATTERN]              "ag search result (ALT-A to select all, ALT-D to deselect all)
+":Rg [PATTERN]              "rg search result (ALT-A to select all, ALT-D to deselect all)
+":Lines [QUERY]             "Lines in loaded buffers
+":BLines [QUERY]            "Lines in the current buffer
+":Tags [QUERY]              "Tags in the project (ctags -R)
+":BTags [QUERY]             "Tags in the current buffer
+":Marks                     "Marks
+":Windows                   "Windows
+":Locate PATTERN            "locate command output
+":History                   "v:oldfiles and open buffers
+":History:                  "Command history
+":History/                  "Search history
+":Snippets                  "Snippets (UltiSnips)
+":Commits                   "Git commits (requires fugitive.vim)
+":BCommits                  "Git commits for the current buffer
+":Commands                  "Commands
+":Maps                      "Normal mode mappings
+":Helptags                  "Help tags 1
+":Filetypes                 "File types
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " IM Auto Switch Back
 let g:input_toggle = 1

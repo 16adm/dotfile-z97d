@@ -115,13 +115,19 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Lazy
 alias e='nvim'
-alias f='fd -Hi'
+alias x='LC_CTYPE="zh_CN.utf8" emacs'
 alias o='alacritty -e'
 alias t='wal -i'
-alias x='LC_CTYPE="zh_CN.utf8" emacs'
-alias tag='id3v2'
-alias dual='xrandr --output HDMI-1-1 --auto --right-of HDMI-0 --primary'
+alias f='fd -Hi'
 alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
+
+# Lazy CD
+alias Doc='cd ~/Documents'
+alias Org='cd ~/Documents/org'
+alias CS='cd ~/Pictures/cheatsheet'
+alias WP='cd ~/Pictures/wallpaper'
+alias SY='cd ~/Sync'
+alias DN='cd ~/Downloads'
 
 # Lazy CONF
 alias ei3='nvim ~/.config/i3/config'
@@ -207,12 +213,10 @@ alias yupa='yay -Sy && sudo abs' # Update and refresh the local package and ABS 
 alias yind='yay -S --asdeps'     # Install given package(s) as dependencies of another package
 alias yclean="yay -Scc"           # Delete all not currently installed package files
 
-# LS
-alias ls='ls -hF --color=auto'
-alias lr='ls -R'                    # recursive ls
-alias ll='ls -alh'
-alias la='ll -A'
-alias lm='la | less'
+# LS or EXA
+alias ls='exa'
+alias ll='exa -alhg'
+alias lg='exa -alhG'
 
 #############
 # FUNCTIONS #
