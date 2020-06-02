@@ -6,17 +6,17 @@ syntax enable
 filetype plugin on
 filetype indent on
 " Textwidth 
-set textwidth=100		" Set Maximum textwidth
-set colorcolumn=+1		" Highlight textwidth
+set textwidth=100               " Set Maximum textwidth
+set colorcolumn=+1              " Highlight textwidth
 " No.
-set relativenumber		" Show relative number
-set numberwidth=5		" Set room for number 
+set relativenumber              " Show relative number
+set numberwidth=5               " Set room for number 
 " Indent
-set autoindent             	" Indent according to previous line.
-set expandtab              	" Use spaces instead of tabs.
-set softtabstop=4         	" Tab key indents by 4 spaces.
-set shiftwidth=4         	" >> indents by 4 spaces.
-set shiftround             	" >> indents to next multiple of 'shiftwidth'.
+set autoindent                  " Indent according to previous line.
+set expandtab                   " Use spaces instead of tabs.
+set softtabstop=4               " Tab key indents by 4 spaces.
+set shiftwidth=4                " >> indents by 4 spaces.
+set shiftround                  " >> indents to next multiple of 'shiftwidth'.
 set backspace=indent,eol,start  " Make backspace work as you would expect.
 " Timeout
 set notimeout
@@ -87,17 +87,36 @@ let g:deoplete#enable_at_startup=1
 " Leader Key
 let mapleader=" "
 
-" Screen
-noremap <leader>sf <C-F>
-noremap <leader>sb <C-B>
-noremap <leader>su <C-U>
-noremap <leader>sd <C-D>
+"Logical Map
+map Y y$
+map j gj
+map k gk
+
+"Sudo Writing
+cmap w!! w !sudo tee % >/dev/null
+
+" Term
+map <leader>to :term<CR>
+map <leader>ti <C-Z>                         " fg to return
+
+"Buffer
+map <leader>bn :bn<CR>
+map <leader>bp :bp<CR>
+map <leader>bd :bc<CR>
+map <leader>bl :ls<CR>
+map <leader>b1 :b1<CR>
+map <leader>b2 :b2<CR>
+map <leader>b3 :b3<CR>
+map <leader>b4 :b4<CR>
+map <leader>b5 :b5<CR>
+map <leader>b6 :b6<CR>
+map <leader>b7 :b7<CR>
+map <leader>b8 :b8<CR>
+map <leader>b9 :b9<CR>
 
 " Window
 map <leader>w <C-W>
 noremap <leader>wS :Startify<CR>
-
-inoremap jk <Esc>
 
 " Local Leader Key
 let maplocalleader=','

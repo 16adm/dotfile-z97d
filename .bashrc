@@ -128,6 +128,7 @@ alias CS='cd ~/Pictures/cheatsheet'
 alias WP='cd ~/Pictures/wallpaper'
 alias SY='cd ~/Sync'
 alias DN='cd ~/Downloads'
+alias MV='cd ~/Movies'
 
 # Lazy CONF
 alias ei3='nvim ~/.config/i3/config'
