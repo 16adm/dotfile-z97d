@@ -115,11 +115,13 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Lazy
 alias e='nvim'
-alias x='LC_CTYPE="zh_CN.utf8" emacs'
+alias xnx='LC_CTYPE="zh_CN.utf8" emacs -nw -Q'
+alias x='LC_CTYPE="en_US.utf8" emacs' 
 alias o='alacritty -e'
 alias t='wal -i'
 alias f='fd -Hi'
 alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
+alias steam='flatpak run com.valvesoftware.Steam'
 
 # Lazy CD
 alias Doc='cd ~/Documents'
@@ -186,33 +188,21 @@ alias root='sudo su'
 alias reboot='sudo reboot'
 alias halt='sudo halt'
 
-# PACMAN ALIASES
-alias pacman='sudo pacman'
-alias pacupg='pacman -Syu'            # Synchronize with repositories and then upgrade packages that are out of date on the local system.
-alias pacupd='pacman -Sy'             # Refresh of all package lists after updating /etc/pacman.d/mirrorlist
-alias pacin='pacman -S'               # Install specific package(s) from the repositories
-alias pacinu='pacman -U'              # Install specific local package(s)
-alias pacre='pacman -R'               # Remove the specified package(s), retaining its configuration(s) and required dependencies
-alias pacun='pacman -Rcsn'            # Remove the specified package(s), its configuration(s) and unneeded dependencies
-alias pacinfo='pacman -Si'            # Display information about a given package in the repositories
-alias pacse='pacman -Ss'              # Search for package(s) in the repositories
-alias pacupa='pacman -Sy && sudo abs' # Update and refresh the local package and ABS databases against repositories
-alias pacind='pacman -S --asdeps'     # Install given package(s) as dependencies of another package
-alias pacclean="pacman -Scc"           # Delete all not currently installed package files
-alias pacmake="makepkg -fcsi"         # Make package from PKGBUILD file in current directory
-
 # YAY ALIASES
-alias yupg='yay -Syu'            # Synchronize with repositories and then upgrade packages that are out of date on the local system.
-alias yupd='yay -Sy'             # Refresh of all package lists after updating/etc/pacman.d/mirrorlist
-alias yin='yay -S'               # Install specific package(s) from the repositories
-alias yinu='yay -U'              # Install specific local package(s)
-alias yre='yay -R'               # Remove the specified package(s), retaining its configuration(s) and required dependencies
-alias yun='yay -Rcsn'            # Remove the specified package(s), its configuration(s) and unneeded dependencies
-alias yinfo='yay -Si'            # Display information about a given package in the repositories
-alias yse='yay -Ss'              # Search for package(s) in the repositories
-alias yupa='yay -Sy && sudo abs' # Update and refresh the local package and ABS databases against repositories
-alias yind='yay -S --asdeps'     # Install given package(s) as dependencies of another package
-alias yclean="yay -Scc"           # Delete all not currently installed package files
+alias ysyyu='yay -Syu'
+alias ysy='yay -Sy'
+alias yabs='yay -Sy && sudo abs'
+alias yss='yay -Ss'
+alias ysi='yay -Si'
+alias ys='yay -S'
+alias yasdeps='yay -S --asdeps'
+alias yscc="yay -Scc"
+alias yu='yay -U'
+alias yR='yay -Rcsn'
+alias pacmake="makepkg -fcsi"
+alias yqs="yay -Qs"
+alias yqi="yay -Qi"
+alias yql="yay -Ql"
 
 # LS or EXA
 alias ls='exa'

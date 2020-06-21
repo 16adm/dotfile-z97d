@@ -6,7 +6,7 @@ syntax enable
 filetype plugin on
 filetype indent on
 " Textwidth 
-set textwidth=100               " Set Maximum textwidth
+set textwidth=80               " Set Maximum textwidth
 set colorcolumn=+1              " Highlight textwidth
 " No.
 set relativenumber              " Show relative number
@@ -40,8 +40,6 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'mhinz/vim-startify'
 " Lightline
 Plug 'itchyny/lightline.vim'
-"Vim Calendar
-Plug 'itchyny/calendar.vim'
 " Writing!
 Plug 'junegunn/goyo.vim'
 " Hyperfocus
@@ -102,7 +100,7 @@ map <leader>ti <C-Z>                         " fg to return
 "Buffer
 map <leader>bn :bn<CR>
 map <leader>bp :bp<CR>
-map <leader>bd :bc<CR>
+map <leader>bc :bd<CR>
 map <leader>bl :ls<CR>
 map <leader>b1 :b1<CR>
 map <leader>b2 :b2<CR>

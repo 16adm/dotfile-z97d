@@ -62,7 +62,8 @@ bindcode $mod+25 move window to workspace next
 bindcode $mod+26 move container to workspace prev
 bindcode $mod+27 move container to workspace next
  
-
+workspace 1 output HDMI-0
+workspace 10 output DP-0
 
 #LAYOUT
 
@@ -89,8 +90,9 @@ client.focused_inactive #32302f #32302f #dfbf8e #32302f   #32302f
 
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom -CGb --config ~/.config/picom/picom.conf
-exec --no-startup-id xrandr --output HDMI-0 --auto --primary --output HDMI-1-1 --auto --rotate right --right-of HDMI-0
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/alone-girl-wallpaper.jpg
+exec --no-startup-id xrandr --output HDMI-0 --auto --primary --output DP-0 --auto --rotate left --right-of HDMI-0
+#exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/alone-girl-wallpaper.jpg
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id fcitx -d
 exec --no-startup-id emacs --daemon 
 exec --no-startup-id udiskie --no-notify --tray --file-manager pcmanfm

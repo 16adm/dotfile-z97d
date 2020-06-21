@@ -59,9 +59,11 @@ settings:
       aw: https://wiki.archlinux.org/?search={}
       bb: https://search.bilibili.com/all?keyword={}
       bn: https://www.bing.com/search?q={}
+      da: https://www.deviantart.com/search?q={}
       dict: http://dict.cn/{}
       ew: https://en.wikipedia.org/wiki/{}
       git: https://github.com/search?q={}
+      quo: https://www.quora.com/search?q={}
       rd: https://reddit.com/search/?q={}
       rdr: https://reddit.com/r/{}
       sos: https://stackoverflow.com/search?q={}
