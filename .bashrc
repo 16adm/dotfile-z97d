@@ -115,8 +115,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Lazy
 alias e='nvim'
-alias xnx='LC_CTYPE="zh_CN.utf8" emacs -nw -Q'
-alias x='LC_CTYPE="en_US.utf8" emacs' 
+alias x='LC_CTYPE="zh_CN.utf8" emacs'
 alias o='alacritty -e'
 alias t='wal -i'
 alias f='fd -Hi'
