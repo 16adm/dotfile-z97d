@@ -78,11 +78,6 @@ if [[ $TERMINIX_ID ]]; then
 	source /etc/profile.d/vte.sh
 fi
 
-# ANDROID SDK
-if [[ -d "/opt/android-sdk" ]]; then
-	export ANDROID_HOME=/opt/android-sdk
-fi
-
 # CHROME
 if which google-chrome-stable &>/dev/null; then
 	export CHROME_BIN=/usr/bin/google-chrome-stable
@@ -139,6 +134,10 @@ alias evim='nvim ~/.config/nvim/init.vim'
 alias edoom='nvim ~/.doom.d/config.el' 
 alias eurl='nvim ~/.config/qutebrowser/bookmarks/urls'
 
+# Systemd
+alias wland='sudo systemctl stop wpa_supplicant@wlp0s20u13'
+alias wlanc='sudo systemctl start wpa_supplicant@wlp0s20u13'
+
 # ExpressVPN
 alias la5='expressvpn connect usla5'
 alias hk='expressvpn connect hk4'
@@ -178,7 +177,6 @@ alias grep='grep --color=auto'
 alias grep='grep --color=tty -d skip'
 alias mkdir='mkdir -p -v'
 alias more='less'
-alias nano='nano -w'
 alias ping='ping -c 5'
 
 # PRIVILEGED ACCESS
