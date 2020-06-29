@@ -40,6 +40,7 @@ settings:
     https://o87hf.putop.me: false
     https://pflv3.putop.me: false
     https://www.reddit.com: false
+    https://www.xn--thepratebay-fcb.com: false
     https://www.youtube.com: false
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: true

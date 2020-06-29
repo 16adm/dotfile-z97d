@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
+set termguicolors
 syntax enable
 " Filetype
 filetype plugin on

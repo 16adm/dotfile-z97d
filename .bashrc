@@ -133,6 +133,7 @@ alias ei3='nvim ~/.config/i3/config'
 alias evim='nvim ~/.config/nvim/init.vim'
 alias edoom='nvim ~/.doom.d/config.el' 
 alias eurl='nvim ~/.config/qutebrowser/bookmarks/urls'
+alias emir='sudo nvim /etc/pacman.d/mirrorlist'
 
 # Systemd
 alias wland='sudo systemctl stop wpa_supplicant@wlp0s20u13'

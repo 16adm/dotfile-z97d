@@ -84,7 +84,7 @@ IMSwitchIncludeInactive=True
 # No
 # All
 # PerProgram
-#ShareStateAmongWindow=No
+ShareStateAmongWindow=No
 # 默认输入法状态
 # Available Value:
 # Inactive
