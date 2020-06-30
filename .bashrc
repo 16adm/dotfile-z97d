@@ -118,6 +118,7 @@ alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
 alias shot="scrot '%Y-%m-%d_scrot.png' -e 'mv $f ~/tmp/shots/'"
 alias shots="scrot -s '/home/shieh/tmp/%Y-%m-%d_scrot.png'"
 alias steam='flatpak run com.valvesoftware.Steam'
+alias btud='bash <(curl -fsSL git.io/tracker.sh) "~/.config/aria2/aria2.conf"'
 
 # Lazy CD
 alias Doc='cd ~/Documents'
