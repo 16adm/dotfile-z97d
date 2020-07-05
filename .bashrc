@@ -206,9 +206,8 @@ alias yqi="yay -Qi"
 alias yql="yay -Ql"
 
 # LS or EXA
-alias ls='exa'
-alias ll='exa -alhg'
-alias lg='exa -alhG'
+alias ll='exa -lhG' 
+alias la='exa -alhG'
 
 #############
 # FUNCTIONS #

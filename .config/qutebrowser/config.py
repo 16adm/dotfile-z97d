@@ -17,7 +17,7 @@ c.fonts.default_size = "12pt"
 c.downloads.location.directory = "~/Downloads"
 c.url.start_pages = ["https://github.com"] 
 c.url.default_page = "about:blank"
-c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/search?q={}",
+c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}",
                         "aw": "https://wiki.archlinux.org/?search={}",
                         "bb": "https://search.bilibili.com/all?keyword={}",
                         "bn": "https://www.bing.com/search?q={}",
