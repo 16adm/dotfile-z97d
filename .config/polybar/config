@@ -45,9 +45,13 @@ format-padding = 1
 [module/wlan]
 type = internal/network
 interface = wlp0s20u13
-interval = 5
-label-connected = %essid%
-lable-disconnected = notconnected
+interval = 3.0
+format-connected = <label-connected>
+label-connected = %downspeed:9%
+format-disconnected = <label-disconnected>
+lable-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+format-padding = 1
 
 [module/i3]
 type = internal/i3
