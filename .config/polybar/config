@@ -1,18 +1,32 @@
-[bar/fullbar]
-monitor = 
+[bar/hdmi]
+monitor = HDMI-0
 include-file = ~/.config/polybar/fullbar
 
 ; Gruvbox material theme
 background = #bb32302f
 foreground = #dfbf83
 pseudo-transparency = true
-modules-left = i3 mpd title 
+modules-left = i3 title 
 modules-center =
-modules-right = volume eth wlan date
+modules-right = eth wlan date
 
 tray-position = right
 tray-padding = 2
 
+[bar/dp]
+monitor = DP-0
+include-file = ~/.config/polybar/fullbar
+
+; Gruvbox material theme
+background = #bb32302f
+foreground = #dfbf83
+pseudo-transparency = true
+modules-left = i3 title 
+modules-center =
+modules-right = eth wlan date
+
+tray-position = right
+tray-padding = 2
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/date]
@@ -20,16 +34,8 @@ type = internal/date
 interval = 60
 date = %a %d %b
 time = %l:%M %p
-label =  %date% %time%
+label = %date% %time%
 format-padding = 1
-
-[module/volume]
-type = internal/pulseaudio
-format-volume = <ramp-volume><label-volume>
-format-muted = 婢
-ramp-volume-0 = 奄
-ramp-volume-1 = 奔
-ramp-volume-2 = 墳
 
 [module/eth]
 type = internal/network

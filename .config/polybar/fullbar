@@ -5,7 +5,6 @@ line-size                = 0
 bottom                   = false
 
 font-0 = "M+ 1mn:size=12;2"
-font-1 = "Symbols Nerd Font:size=12;2"
 
 override-redirect = false
 screenchange-reload      = true
